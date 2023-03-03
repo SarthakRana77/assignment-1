@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MaxBill</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/forms.css">
+    <link rel="stylesheet" href="/css/product.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <nav class="main-header__nav">
+            <ul class="main-header__item-list">
+                <li class="main-header__item"><a class="<%= path === '/' ? 'active' : '' %>" href="/">Create Agency and Client</a></li>
+                <li class="main-header__item"><a class="<%= path === '/check-client' ? 'active' : '' %>" href="/check-client">Update Client</a></li>
+                <li class="main-header__item"><a class="<%= path === '/maxbilling' ? 'active' : '' %>" href="/maxbilling">Max Bill Client</a></li>
+            </ul>
+        </nav>
+    </header>
+        <main>
+            <form method="POST" class="product-form" action="/displayCalc">
+                <div class="form-control">
+                    <button class="btn1" type="submit">Calculate</button>
+                    <div>
+                        <h2>This will return name of agency along with client details which has top client(s) with maximum total bill !!!</h2>
+                    </div>
+                </div>
+            </form>   
+        </main>
+<%- include('includes/end.ejs') %>
